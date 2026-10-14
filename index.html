@@ -1,0 +1,1145 @@
+<!DOCTYPE html>
+<html lang="en" class="dark h-full">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMJ Inspirations | High-Performance Tech Services</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Inter & JetBrains Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            dark: '#0a0e17',
+                            card: '#111827',
+                            cardHover: '#1f2937',
+                            border: '#1f2937',
+                            cyan: '#06b6d4',
+                            emerald: '#10b981',
+                            indigo: '#6366f1',
+                            purple: '#8b5cf6'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace']
+                    },
+                    animation: {
+                        'pulse-glow': 'pulseGlow 3s infinite alternate',
+                        'gradient-x': 'gradientX 6s ease infinite',
+                    },
+                    keyframes: {
+                        pulseGlow: {
+                            '0%': { boxShadow: '0 0 15px rgba(6, 182, 212, 0.2)' },
+                            '100%': { boxShadow: '0 0 35px rgba(6, 182, 212, 0.6), 0 0 15px rgba(16, 185, 129, 0.4)' }
+                        },
+                        gradientX: {
+                            '0%, 100%': { 'background-size': '200% 200%', 'background-position': 'left center' },
+                            '50%': { 'background-size': '200% 200%', 'background-position': 'right center' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom Customizations & Apex Glow Essentials */
+        body {
+            background-color: #0a0e17;
+            color: #f3f4f6;
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+        }
+
+        .apex-glass {
+            background: rgba(17, 24, 39, 0.75);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .apex-glass-card {
+            background: rgba(17, 24, 39, 0.65);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(31, 41, 55, 0.8);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .apex-glass-card:hover {
+            border-color: rgba(6, 182, 212, 0.4);
+            transform: translateY(-4px);
+            box-shadow: 0 12px 30px -10px rgba(6, 182, 212, 0.15);
+        }
+
+        .apex-glow-cyan {
+            box-shadow: 0 0 20px -3px rgba(6, 182, 212, 0.35);
+        }
+
+        .apex-glow-emerald {
+            box-shadow: 0 0 20px -3px rgba(16, 185, 129, 0.35);
+        }
+
+        .apex-gradient-text {
+            background: linear-gradient(135deg, #38bdf8 0%, #06b6d4 50%, #10b981 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .apex-gradient-border {
+            position: relative;
+            border-radius: 1rem;
+            background: linear-gradient(#111827, #111827) padding-box,
+                        linear-gradient(135deg, rgba(6, 182, 212, 0.5), rgba(99, 102, 241, 0.5)) border-box;
+            border: 1px solid transparent;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0a0e17;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #1f2937;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #06b6d4;
+        }
+
+        /* Before/After Split Slider Handle */
+        .slider-divider {
+            box-shadow: 0 0 15px rgba(6, 182, 212, 0.8), 0 0 5px rgba(255, 255, 255, 0.9);
+        }
+    </style>
+</head>
+<body class="min-h-full flex flex-col bg-[#0a0e17] text-slate-100 antialiased selection:bg-cyan-500 selection:text-black">
+
+    <!-- Glowing Background Orbs -->
+    <div class="fixed top-0 left-1/4 w-[500px] h-[500px] bg-cyan-500/10 rounded-full blur-[120px] pointer-events-none z-0"></div>
+    <div class="fixed top-1/3 right-10 w-[450px] h-[450px] bg-indigo-500/10 rounded-full blur-[130px] pointer-events-none z-0"></div>
+    <div class="fixed bottom-10 left-1/3 w-[600px] h-[600px] bg-emerald-500/10 rounded-full blur-[150px] pointer-events-none z-0"></div>
+
+    <!-- Navigation Bar -->
+    <header class="sticky top-0 z-50 apex-glass border-b border-slate-800/80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Brand Logo & Title -->
+                <a href="#" class="flex items-center space-x-3 group">
+                    <div class="w-11 h-11 rounded-xl bg-gradient-to-tr from-cyan-500 via-indigo-600 to-emerald-400 p-[2px] shadow-lg shadow-cyan-500/20 group-hover:shadow-cyan-500/40 transition-all duration-300">
+                        <div class="w-full h-full bg-slate-950 rounded-[10px] flex items-center justify-center">
+                            <span class="text-transparent bg-clip-text bg-gradient-to-tr from-cyan-400 to-emerald-400 font-extrabold text-2xl tracking-tighter">S</span>
+                        </div>
+                    </div>
+                    <div class="flex flex-col">
+                        <div class="flex items-center space-x-1">
+                            <span class="text-xl font-black tracking-tight text-white">SMJ</span>
+                            <span class="text-xl font-light text-cyan-400">Inspirations</span>
+                        </div>
+                        <span class="text-[10px] font-mono text-slate-400 tracking-widest uppercase">Tech Services & Architecture</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation Links -->
+                <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-300">
+                    <a href="#services" class="hover:text-cyan-400 transition-colors">Services</a>
+                    <a href="#portfolio" class="hover:text-cyan-400 transition-colors">Performance Lab</a>
+                    <a href="#plans" class="hover:text-cyan-400 transition-colors">SMJCare Tiers</a>
+                    <a href="#calculator" class="hover:text-cyan-400 transition-colors">ROI Calculator</a>
+                    <a href="#configurator" class="hover:text-cyan-400 transition-colors">Scope Estimator</a>
+                </nav>
+
+                <!-- Actions -->
+                <div class="flex items-center space-x-4">
+                    <button onclick="openModal()" class="relative inline-flex items-center justify-center p-0.5 overflow-hidden text-xs font-semibold rounded-xl group bg-gradient-to-br from-cyan-500 via-indigo-500 to-emerald-500 group-hover:from-cyan-500 group-hover:to-emerald-500 hover:text-white text-white shadow-lg shadow-cyan-500/20 hover:shadow-cyan-500/40 transition-all duration-300">
+                        <span class="relative px-4 py-2.5 transition-all ease-in duration-75 bg-slate-950 rounded-[10px] group-hover:bg-opacity-0">
+                            <i class="fa-solid fa-calendar-check mr-2 text-cyan-400 group-hover:text-white">="</i>Schedule Discovery
+                        </span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow z-10">
+
+        <!-- SECTION 1: DUAL HERO (Interactive Code Terminal & Live Theme Customizer) -->
+        <section class="relative pt-12 pb-20 md:pt-20 md:pb-32 overflow-hidden">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <!-- Headline -->
+                <div class="text-center max-w-3xl mx-auto mb-12">
+                    <div class="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 text-xs font-mono mb-6">
+                        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+                        <span>ENTERPRISE ARCHITECTURE & DIGITAL ENGAGEMENT</span>
+                    </div>
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-white leading-tight">
+                        Engineered for Speed. <br>
+                        <span class="apex-gradient-text">Built for Enterprise Scale.</span>
+                    </h1>
+                    <p class="mt-6 text-base sm:text-lg text-slate-400 leading-relaxed">
+                        We deliver high-end IT consulting, full-stack custom web applications, proactive cloud maintenance, and performance optimization with guaranteed SLA response times.
+                    </p>
+                </div>
+
+                <!-- Dual Hero Grid -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
+                    
+                    <!-- Left: Interactive CLI Code Terminal -->
+                    <div class="apex-glass-card rounded-2xl p-0 overflow-hidden border border-slate-800 flex flex-col shadow-2xl">
+                        <!-- Terminal Bar -->
+                        <div class="bg-slate-900/90 px-4 py-3 border-b border-slate-800 flex items-center justify-between">
+                            <div class="flex items-center space-x-2">
+                                <div class="w-3 h-3 rounded-full bg-red-500/80"></div>
+                                <div class="w-3 h-3 rounded-full bg-yellow-500/80"></div>
+                                <div class="w-3 h-3 rounded-full bg-emerald-500/80"></div>
+                                <span class="text-xs font-mono text-slate-400 ml-2">smj-cli ~ v2.4.0</span>
+                            </div>
+                            <span class="text-[11px] font-mono text-cyan-400 bg-cyan-950/60 px-2 py-0.5 rounded border border-cyan-800/50">LIVE ENVIRONMENT</span>
+                        </div>
+                        
+                        <!-- Terminal Output Window -->
+                        <div id="terminal-body" class="p-5 font-mono text-xs sm:text-sm text-slate-300 space-y-3 h-72 overflow-y-auto bg-[#070a11]">
+                            <p class="text-slate-500">// Welcome to SMJ Inspirations Interactive Terminal.</p>
+                            <p class="text-slate-500">// Type <span class="text-cyan-400 font-bold">help</span> to view available interactive commands.</p>
+                            <div id="terminal-history" class="space-y-2"></div>
+                        </div>
+
+                        <!-- Terminal Command Line Input -->
+                        <div class="p-3 bg-slate-900/90 border-t border-slate-800 flex items-center space-x-2">
+                            <span class="text-emerald-400 font-mono text-sm font-bold pl-2">$</span>
+                            <input type="text" id="terminal-input" placeholder="Try 'services', 'quote', 'audit', or 'help'..." 
+                                   class="w-full bg-transparent border-none text-cyan-300 font-mono text-sm focus:outline-none focus:ring-0 placeholder-slate-600"
+                                   onkeydown="handleTerminalCommand(event)">
+                            <button onclick="submitTerminalInput()" class="px-3 py-1 bg-cyan-500/20 hover:bg-cyan-500/30 text-cyan-300 border border-cyan-500/30 rounded text-xs font-mono transition-colors">
+                                RUN
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Right: Instant Visual Theme & Capability Customizer -->
+                    <div id="theme-customizer-card" class="apex-glass-card rounded-2xl p-6 border border-slate-800 flex flex-col justify-between shadow-2xl relative overflow-hidden">
+                        <div>
+                            <div class="flex items-center justify-between mb-4">
+                                <h3 class="text-lg font-bold text-white flex items-center">
+                                    <i class="fa-solid fa-palette text-cyan-400 mr-2.5"></i> Customizer Preview Visualizer
+                                </h3>
+                                <span class="text-xs font-mono text-slate-400 bg-slate-800 px-2.5 py-1 rounded-full">Real-Time DOM Engine</span>
+                            </div>
+                            <p class="text-xs text-slate-400 mb-6">Test our frontend development versatility by customizing theme tokens and accent highlights in real time.</p>
+
+                            <!-- Theme Selector Controls -->
+                            <div class="space-y-4">
+                                <div>
+                                    <label class="block text-xs font-mono text-slate-300 mb-2">1. Select Preset Theme Profile:</label>
+                                    <div class="grid grid-cols-3 gap-2">
+                                        <button onclick="setCustomizerTheme('apex-dark')" id="theme-btn-apex" class="py-2 px-3 rounded-lg border border-cyan-500/50 bg-cyan-500/10 text-cyan-300 text-xs font-medium flex items-center justify-center space-x-1.5 transition-all">
+                                            <span class="w-2.5 h-2.5 rounded-full bg-cyan-400"></span>
+                                            <span>Dark Slate</span>
+                                        </button>
+                                        <button onclick="setCustomizerTheme('cyber-neon')" id="theme-btn-cyber" class="py-2 px-3 rounded-lg border border-slate-700 bg-slate-800/50 text-slate-400 hover:text-white text-xs font-medium flex items-center justify-center space-x-1.5 transition-all">
+                                            <span class="w-2.5 h-2.5 rounded-full bg-purple-500"></span>
+                                            <span>Cyber Neon</span>
+                                        </button>
+                                        <button onclick="setCustomizerTheme('emerald-matrix')" id="theme-btn-emerald" class="py-2 px-3 rounded-lg border border-slate-700 bg-slate-800/50 text-slate-400 hover:text-white text-xs font-medium flex items-center justify-center space-x-1.5 transition-all">
+                                            <span class="w-2.5 h-2.5 rounded-full bg-emerald-400"></span>
+                                            <span>Matrix Green</span>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <!-- Custom Color Picker Adjuster -->
+                                <div>
+                                    <label class="block text-xs font-mono text-slate-300 mb-2">2. Adjust Primary Accent Color Variable:</label>
+                                    <div class="flex items-center space-x-3">
+                                        <input type="color" id="accent-color-picker" value="#06b6d4" oninput="updateAccentColor(this.value)" class="w-10 h-10 rounded cursor-pointer bg-slate-800 border-0 p-0">
+                                        <span id="accent-color-hex" class="font-mono text-xs text-cyan-400 bg-slate-900 px-3 py-2 rounded-lg border border-slate-800">#06b6d4</span>
+                                        <span class="text-xs text-slate-500">Live dynamic variable update</span>
+                                    </div>
+                                </div>
+
+                                <!-- UI Density Switcher -->
+                                <div>
+                                    <label class="block text-xs font-mono text-slate-300 mb-2">3. Layout Card Radius Style:</label>
+                                    <div class="flex items-center space-x-3">
+                                        <button onclick="setCornerRadius('rounded-none')" class="px-3 py-1.5 text-xs font-mono bg-slate-800 text-slate-300 rounded hover:bg-slate-700 border border-slate-700">Square</button>
+                                        <button onclick="setCornerRadius('rounded-xl')" class="px-3 py-1.5 text-xs font-mono bg-slate-800 text-slate-300 rounded-xl hover:bg-slate-700 border border-slate-700">Balanced</button>
+                                        <button onclick="setCornerRadius('rounded-3xl')" class="px-3 py-1.5 text-xs font-mono bg-slate-800 text-slate-300 rounded-3xl hover:bg-slate-700 border border-slate-700">Soft Pill</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Mini Live Preview Box -->
+                        <div id="theme-preview-box" class="mt-6 p-4 rounded-xl bg-slate-900 border border-slate-800 transition-all duration-300">
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="text-xs font-semibold text-white">Component Preview</span>
+                                <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-cyan-500/20 text-cyan-400">STATUS: OPTIMAL</span>
+                            </div>
+                            <p class="text-xs text-slate-400 mb-3">Live CSS variables correctly compiled with zero layout shift.</p>
+                            <button class="w-full py-2 bg-gradient-to-r from-cyan-500 to-indigo-600 hover:from-cyan-400 hover:to-indigo-500 text-white font-semibold rounded-lg text-xs transition-all shadow-md">
+                                Component Action Button
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 2: SERVICES WITH HOVER-TO-REVEAL ARCHITECTURE -->
+        <section id="services" class="py-20 relative border-t border-slate-800/80">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <span class="text-cyan-400 font-mono text-xs tracking-widest uppercase bg-cyan-500/10 px-3 py-1 rounded-full border border-cyan-500/20">Core Capabilities</span>
+                    <h2 class="text-3xl md:text-4xl font-extrabold text-white mt-3">Services & Lifecycle Architecture</h2>
+                    <p class="text-slate-400 mt-3 text-sm md:text-base">Hover over any capability to reveal our underlying engineering lifecycle and delivery methodology.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    
+                    <!-- Service 1: IT Consulting & Cloud Architecture -->
+                    <div class="group apex-glass-card rounded-2xl p-7 relative overflow-hidden flex flex-col justify-between">
+                        <div>
+                            <div class="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400 mb-6 group-hover:scale-110 transition-transform duration-300">
+                                <i class="fa-solid fa-server text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">IT Consulting & Infrastructure</h3>
+                            <p class="text-xs text-slate-400 leading-relaxed mb-6">Cloud migration, multi-region failover, Kubernetes orchestration, and Zero-Trust security auditing.</p>
+                        </div>
+
+                        <!-- Hover-to-Reveal Architecture Blueprint Overlay -->
+                        <div class="opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-slate-950/95 absolute inset-0 p-6 flex flex-col justify-between z-20 border border-cyan-500/40 rounded-2xl backdrop-blur-md">
+                            <div>
+                                <span class="text-[10px] font-mono text-cyan-400 uppercase tracking-wider block mb-2">ENGINEERING LIFECYCLE</span>
+                                <h4 class="text-sm font-bold text-white mb-3 border-b border-slate-800 pb-2">Consulting Delivery Pipeline</h4>
+                                <ol class="space-y-2 text-xs font-mono text-slate-300">
+                                    <li class="flex items-center"><span class="w-4 h-4 rounded-full bg-cyan-500/20 text-cyan-400 flex items-center justify-center text-[10px] mr-2">1</span> Infrastructure Discovery Audit</li>
+                                    <li class="flex items-center"><span class="w-4 h-4 rounded-full bg-cyan-500/20 text-cyan-400 flex items-center justify-center text-[10px] mr-2">2</span> Cloud Cost & SLA Optimization</li>
+                                    <li class="flex items-center"><span class="w-4 h-4 rounded-full bg-cyan-500/20 text-cyan-400 flex items-center justify-center text-[10px] mr-2">3</span> Automated IaC Terraform Scripting</li>
+                                    <li class="flex items-center"><span class="w-4 h-4 rounded-full bg-cyan-500/20 text-cyan-400 flex items-center justify-center text-[10px] mr-2">4</span> Zero-Downtime Deployment Cutover</li>
+                                </ol>
+                            </div>
+                            <div class="pt-3 border-t border-slate-800 flex justify-between items-center text-[11px] font-mono text-emerald-400">
+                                <span><i class="fa-solid fa-shield-halved mr-1"></i> SOC2 Compliant</span>
+                                <span>SLA: 99.99%</span>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center justify-between text-xs font-mono text-slate-500 border-t border-slate-800/80 pt-4">
+                            <span>AWS / Azure / GCP</span>
+                            <span class="text-cyan-400 flex items-center group-hover:translate-x-1 transition-transform">Explore <i class="fa-solid fa-arrow-right ml-1"></i></span>
+                        </div>
+                    </div>
+
+                    <!-- Service 2: Web Site & Application Development -->
+                    <div class="group apex-glass-card rounded-2xl p-7 relative overflow-hidden flex flex-col justify-between">
+                        <div>
+                            <div class="w-12 h-12 rounded-xl bg-indigo-500/10 border border-indigo-500/30 flex items-center justify-center text-indigo-400 mb-6 group-hover:scale-110 transition-transform duration-300">
+                                <i class="fa-solid fa-code text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-white mb-2 group-hover:text-indigo-400 transition-colors">Custom Web Apps & Sites</h3>
+                            <p class="text-xs text-slate-400 leading-relaxed mb-6">Ultra-fast web platforms using React, Next.js, modern backend microservices, and headless CMS solutions.</p>
+                        </div>
+
+                        <!-- Hover-to-Reveal Architecture Blueprint Overlay -->
+                        <div class="opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-slate-950/95 absolute inset-0 p-6 flex flex-col justify-between z-20 border border-indigo-500/40 rounded-2xl backdrop-blur-md">
+                            <div>
+                                <span class="text-[10px] font-mono text-indigo-400 uppercase tracking-wider block mb-2">ENGINEERING LIFECYCLE</span>
+                                <h4 class="text-sm font-bold text-white mb-3 border-b border-slate-800 pb-2">Full-Stack Dev Pipeline</h4>
+                                <ol class="space-y-2 text-xs font-mono text-slate-300">
+                                    <li class="flex items-center"><span class="w-4 h-4 rounded-full bg-indigo-500/20 text-indigo-400 flex items-center justify-center text-[10px] mr-2">1</span> UX Wireframing & Component Tokens</li>
+                                    <li class="flex items-center"><span class="w-4 h-4 rounded-full bg-indigo-500/20 text-indigo-400 flex items-center justify-center text-[10px] mr-2">2</span> SSR / Edge Runtime Development</li>
+                                    <li class="flex items-center"><span class="w-4 h-4 rounded-full bg-indigo-500/20 text-indigo-400 flex items-center justify-center text-[10px] mr-2">3</span> Automated E2E Testing Suite</li>
+                                    <li class="flex items-center"><span class="w-4 h-4 rounded-full bg-indigo-500/20 text-indigo-400 flex items-center justify-center text-[10px] mr-2">4</span> Global Edge CDN Distribution</li>
+                                </ol>
+                            </div>
+                            <div class="pt-3 border-t border-slate-800 flex justify-between items-center text-[11px] font-mono text-indigo-400">
+                                <span><i class="fa-solid fa-bolt mr-1"></i> Sub-100ms TTFB</span>
+                                <span>Lighthouse 100</span>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center justify-between text-xs font-mono text-slate-500 border-t border-slate-800/80 pt-4">
+                            <span>React / Node / Tailwind</span>
+                            <span class="text-indigo-400 flex items-center group-hover:translate-x-1 transition-transform">Explore <i class="fa-solid fa-arrow-right ml-1"></i></span>
+                        </div>
+                    </div>
+
+                    <!-- Service 3: Site Maintenance & Security SLA -->
+                    <div class="group apex-glass-card rounded-2xl p-7 relative overflow-hidden flex flex-col justify-between">
+                        <div>
+                            <div class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 mb-6 group-hover:scale-110 transition-transform duration-300">
+                                <i class="fa-solid fa-shield-virus text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-white mb-2 group-hover:text-emerald-400 transition-colors">Continuous Maintenance & Care</h3>
+                            <p class="text-xs text-slate-400 leading-relaxed mb-6">24/7 proactive patch management, automated backups, continuous malware scanning, and core update testing.</p>
+                        </div>
+
+                        <!-- Hover-to-Reveal Architecture Blueprint Overlay -->
+                        <div class="opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-slate-950/95 absolute inset-0 p-6 flex flex-col justify-between z-20 border border-emerald-500/40 rounded-2xl backdrop-blur-md">
+                            <div>
+                                <span class="text-[10px] font-mono text-emerald-400 uppercase tracking-wider block mb-2">ENGINEERING LIFECYCLE</span>
+                                <h4 class="text-sm font-bold text-white mb-3 border-b border-slate-800 pb-2">SMJCare Maintenance Pipeline</h4>
+                                <ol class="space-y-2 text-xs font-mono text-slate-300">
+                                    <li class="flex items-center"><span class="w-4 h-4 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-[10px] mr-2">1</span> Daily Automated Offsite Backups</li>
+                                    <li class="flex items-center"><span class="w-4 h-4 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-[10px] mr-2">2</span> Staging Environment Dependency Patching</li>
+                                    <li class="flex items-center"><span class="w-4 h-4 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-[10px] mr-2">3</span> Automated Security Vulnerability Scan</li>
+                                    <li class="flex items-center"><span class="w-4 h-4 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-[10px] mr-2">4</span> Real-time Synthetic Traffic Monitor</li>
+                                </ol>
+                            </div>
+                            <div class="pt-3 border-t border-slate-800 flex justify-between items-center text-[11px] font-mono text-emerald-400">
+                                <span><i class="fa-solid fa-clock mr-1"></i> 15-Min Emergency SLA</span>
+                                <span>Zero Security Violations</span>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center justify-between text-xs font-mono text-slate-500 border-t border-slate-800/80 pt-4">
+                            <span>SMJCare SLA / 24-7</span>
+                            <span class="text-emerald-400 flex items-center group-hover:translate-x-1 transition-transform">Explore <i class="fa-solid fa-arrow-right ml-1"></i></span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3: WORK PORTFOLIO & DRAGGABLE BEFORE/AFTER PERFORMANCE LAB -->
+        <section id="portfolio" class="py-20 relative bg-slate-950/70 border-t border-slate-800">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-14">
+                    <span class="text-emerald-400 font-mono text-xs tracking-widest uppercase bg-emerald-500/10 px-3 py-1 rounded-full border border-emerald-500/20">Tangible Proof</span>
+                    <h2 class="text-3xl md:text-4xl font-extrabold text-white mt-3">Interactive Optimization Showcase</h2>
+                    <p class="text-slate-400 mt-3 text-sm md:text-base">Drag the split handle below to compare a bloated legacy web build with an SMJ Inspirations optimized rebuild.</p>
+                </div>
+
+                <!-- Interactive Split Slider Component -->
+                <div class="apex-glass-card rounded-2xl p-4 sm:p-6 border border-slate-800 shadow-2xl">
+                    
+                    <!-- Split Visualizer Container -->
+                    <div id="split-container" class="relative h-[380px] sm:h-[450px] w-full overflow-hidden rounded-xl bg-slate-900 select-none border border-slate-800">
+                        
+                        <!-- RIGHT SIDE: Optimized SMJ Rebuild (Background Layer) -->
+                        <div class="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-950 to-cyan-950 p-6 flex flex-col justify-between">
+                            <div class="flex justify-between items-start">
+                                <div class="bg-emerald-500/20 border border-emerald-500/40 text-emerald-400 px-3 py-1 rounded-full font-mono text-xs font-bold flex items-center">
+                                    <span class="w-2 h-2 rounded-full bg-emerald-400 mr-2 animate-ping"></span>
+                                    OPTIMIZED REBUILD (SMJ INSPIRATIONS)
+                                </div>
+                                <div class="text-right font-mono">
+                                    <div class="text-3xl font-black text-emerald-400" id="optimized-score">99/100</div>
+                                    <div class="text-[10px] text-slate-400">PAGESPEED SCORE</div>
+                                </div>
+                            </div>
+
+                            <!-- Live Mock UI Canvas for Optimized Site -->
+                            <div class="space-y-4 my-auto bg-slate-900/80 p-6 rounded-xl border border-emerald-500/30">
+                                <div class="flex justify-between items-center">
+                                    <div class="h-6 w-32 bg-cyan-500/30 rounded"></div>
+                                    <div class="flex space-x-2">
+                                        <div class="h-4 w-12 bg-slate-700 rounded"></div>
+                                        <div class="h-4 w-12 bg-slate-700 rounded"></div>
+                                        <div class="h-4 w-12 bg-cyan-500/50 rounded"></div>
+                                    </div>
+                                </div>
+                                <div class="h-10 w-3/4 bg-gradient-to-r from-cyan-500/40 to-emerald-500/40 rounded-lg"></div>
+                                <div class="grid grid-cols-3 gap-3">
+                                    <div class="h-20 bg-slate-800/80 rounded-lg border border-emerald-500/20 p-2">
+                                        <div class="h-3 w-10 bg-emerald-400/50 rounded mb-2"></div>
+                                        <div class="h-2 w-full bg-slate-700 rounded"></div>
+                                    </div>
+                                    <div class="h-20 bg-slate-800/80 rounded-lg border border-emerald-500/20 p-2">
+                                        <div class="h-3 w-10 bg-emerald-400/50 rounded mb-2"></div>
+                                        <div class="h-2 w-full bg-slate-700 rounded"></div>
+                                    </div>
+                                    <div class="h-20 bg-slate-800/80 rounded-lg border border-emerald-500/20 p-2">
+                                        <div class="h-3 w-10 bg-emerald-400/50 rounded mb-2"></div>
+                                        <div class="h-2 w-full bg-slate-700 rounded"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-3 gap-2 font-mono text-[11px] text-slate-300 bg-slate-900/90 p-3 rounded-lg border border-slate-800">
+                                <div>LCP: <span class="text-emerald-400 font-bold">0.6s</span></div>
+                                <div>BUNDLE: <span class="text-emerald-400 font-bold">42 KB</span></div>
+                                <div>TTFB: <span class="text-emerald-400 font-bold">28ms</span></div>
+                            </div>
+                        </div>
+
+                        <!-- LEFT SIDE: Legacy Sluggish Site (Clipped Layer) -->
+                        <div id="legacy-layer" class="absolute inset-y-0 left-0 bg-slate-950 p-6 flex flex-col justify-between overflow-hidden border-r border-slate-700" style="width: 50%;">
+                            <div class="flex justify-between items-start min-w-[320px]">
+                                <div class="bg-red-500/20 border border-red-500/40 text-red-400 px-3 py-1 rounded-full font-mono text-xs font-bold flex items-center">
+                                    <span class="w-2 h-2 rounded-full bg-red-500 mr-2"></span>
+                                    UNOPTIMIZED LEGACY SITE
+                                </div>
+                                <div class="text-right font-mono">
+                                    <div class="text-3xl font-black text-red-500">28/100</div>
+                                    <div class="text-[10px] text-slate-500">PAGESPEED SCORE</div>
+                                </div>
+                            </div>
+
+                            <!-- Mock UI for Legacy Site -->
+                            <div class="space-y-4 my-auto bg-slate-900/50 p-6 rounded-xl border border-red-900/30 opacity-70 min-w-[320px]">
+                                <div class="flex justify-between items-center">
+                                    <div class="h-6 w-32 bg-red-900/40 rounded"></div>
+                                    <div class="h-4 w-20 bg-slate-800 rounded"></div>
+                                </div>
+                                <div class="h-10 w-full bg-red-950/40 rounded-lg animate-pulse"></div>
+                                <div class="p-3 bg-red-950/30 rounded border border-red-800/40 text-[10px] font-mono text-red-300">
+                                    ⚠ Warning: 48 Blocking Scripts & Unused CSS Rendered
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-3 gap-2 font-mono text-[11px] text-slate-400 bg-slate-900/90 p-3 rounded-lg border border-slate-800 min-w-[320px]">
+                                <div>LCP: <span class="text-red-400 font-bold">4.8s</span></div>
+                                <div>BUNDLE: <span class="text-red-400 font-bold">3.8 MB</span></div>
+                                <div>TTFB: <span class="text-red-400 font-bold">840ms</span></div>
+                            </div>
+                        </div>
+
+                        <!-- Draggable Slider Handle Line -->
+                        <div id="slider-handle" class="absolute top-0 bottom-0 w-1 bg-cyan-400 cursor-ew-resize z-30 slider-divider" style="left: 50%;">
+                            <div class="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 w-9 h-9 rounded-full bg-cyan-400 text-slate-950 flex items-center justify-center font-bold shadow-lg shadow-cyan-500/50">
+                                <i class="fa-solid fa-arrows-left-right text-xs"></i>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Performance Dynamic Metrics Bar -->
+                    <div class="mt-6 grid grid-cols-2 md:grid-cols-4 gap-4 text-center font-mono">
+                        <div class="p-3 bg-slate-900/80 rounded-xl border border-slate-800">
+                            <span class="text-xs text-slate-400 block">Avg Load Speed</span>
+                            <span id="metric-speed" class="text-lg font-bold text-emerald-400">0.42s (6x Faster)</span>
+                        </div>
+                        <div class="p-3 bg-slate-900/80 rounded-xl border border-slate-800">
+                            <span class="text-xs text-slate-400 block">Conversion Uplift</span>
+                            <span id="metric-conv" class="text-lg font-bold text-cyan-400">+34.8% Increase</span>
+                        </div>
+                        <div class="p-3 bg-slate-900/80 rounded-xl border border-slate-800">
+                            <span class="text-xs text-slate-400 block">SEO Score Index</span>
+                            <span class="text-lg font-bold text-emerald-400">100/100 Top Tier</span>
+                        </div>
+                        <div class="p-3 bg-slate-900/80 rounded-xl border border-slate-800">
+                            <span class="text-xs text-slate-400 block">Server Overhead</span>
+                            <span class="text-lg font-bold text-indigo-400">-62% Reduction</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 4: MAINTENANCE TIERS WITH FEATURE-TOGGLING PRICE MATRIX -->
+        <section id="plans" class="py-20 relative border-t border-slate-800">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-12">
+                    <span class="text-cyan-400 font-mono text-xs tracking-widest uppercase bg-cyan-500/10 px-3 py-1 rounded-full border border-cyan-500/20">Transparent SLA</span>
+                    <h2 class="text-3xl md:text-4xl font-extrabold text-white mt-3">SMJCare Maintenance Tiers</h2>
+                    <p class="text-slate-400 mt-3 text-sm md:text-base">No hidden retainer fees. Toggle billing schedules and optional SLA add-ons in real time.</p>
+
+                    <!-- Billing Toggle -->
+                    <div class="mt-8 inline-flex items-center p-1.5 rounded-xl bg-slate-900 border border-slate-800">
+                        <button id="billing-monthly" onclick="setBilling('monthly')" class="px-5 py-2 rounded-lg text-xs font-mono font-semibold transition-all bg-cyan-500 text-slate-950 shadow-md">
+                            Monthly Billing
+                        </button>
+                        <button id="billing-annual" onclick="setBilling('annual')" class="px-5 py-2 rounded-lg text-xs font-mono font-semibold text-slate-400 hover:text-white transition-all flex items-center space-x-1.5">
+                            <span>Annual Billing</span>
+                            <span class="px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-400 text-[10px]">SAVE 20%</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Tiers Matrix Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
+                    
+                    <!-- Essential Tier -->
+                    <div class="apex-glass-card rounded-2xl p-7 flex flex-col justify-between border border-slate-800">
+                        <div>
+                            <div class="text-xs font-mono text-cyan-400 uppercase tracking-widest mb-2">FOUNDATION COVERAGE</div>
+                            <h3 class="text-2xl font-bold text-white">Essential Care</h3>
+                            <p class="text-xs text-slate-400 mt-2 mb-6">Ideal for marketing sites and content platforms needing routine updates and security.</p>
+
+                            <div class="mb-6 border-b border-slate-800 pb-6">
+                                <span class="text-4xl font-black text-white" id="price-essential">$299</span>
+                                <span class="text-xs text-slate-400 font-mono" id="period-essential">/ month</span>
+                            </div>
+
+                            <ul class="space-y-3 text-xs text-slate-300 font-mono">
+                                <li class="flex items-center"><i class="fa-solid fa-check text-emerald-400 mr-2.5"></i> Daily Offsite Backups</li>
+                                <li class="flex items-center"><i class="fa-solid fa-check text-emerald-400 mr-2.5"></i> Core & Plugin Security Patches</li>
+                                <li class="flex items-center"><i class="fa-solid fa-check text-emerald-400 mr-2.5"></i> 24/7 Uptime Monitoring</li>
+                                <li class="flex items-center"><i class="fa-solid fa-check text-emerald-400 mr-2.5"></i> 48-Hour Response Time SLA</li>
+                            </ul>
+                        </div>
+
+                        <button onclick="selectTier('Essential Care')" class="mt-8 w-full py-3 bg-slate-800 hover:bg-slate-700 text-white font-semibold rounded-xl text-xs font-mono transition-all border border-slate-700">
+                            Select Essential Plan
+                        </button>
+                    </div>
+
+                    <!-- Professional Tier (Highlighted) -->
+                    <div class="apex-glass-card rounded-2xl p-7 flex flex-col justify-between border-2 border-cyan-500 relative shadow-2xl bg-slate-900/80">
+                        <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-gradient-to-r from-cyan-500 to-emerald-500 text-slate-950 font-mono text-[10px] font-black tracking-widest uppercase shadow-md">
+                            MOST POPULAR CHOICE
+                        </div>
+
+                        <div>
+                            <div class="text-xs font-mono text-emerald-400 uppercase tracking-widest mb-2 mt-2">GROWTH & COMMERCE</div>
+                            <h3 class="text-2xl font-bold text-white">Professional Pro</h3>
+                            <p class="text-xs text-slate-400 mt-2 mb-6">For mission-critical web apps, custom React/Node platforms, and active e-commerce.</p>
+
+                            <div class="mb-6 border-b border-slate-800 pb-6">
+                                <span class="text-4xl font-black text-white" id="price-pro">$699</span>
+                                <span class="text-xs text-slate-400 font-mono" id="period-pro">/ month</span>
+                            </div>
+
+                            <ul class="space-y-3 text-xs text-slate-300 font-mono">
+                                <li class="flex items-center"><i class="fa-solid fa-check text-emerald-400 mr-2.5"></i> Everything in Essential Care</li>
+                                <li class="flex items-center"><i class="fa-solid fa-check text-emerald-400 mr-2.5"></i> 4 Hours Included Monthly Dev Work</li>
+                                <li class="flex items-center"><i class="fa-solid fa-check text-emerald-400 mr-2.5"></i> Performance & Core Web Vitals Tuning</li>
+                                <li class="flex items-center"><i class="fa-solid fa-check text-emerald-400 mr-2.5"></i> 4-Hour Incident Response SLA</li>
+                                <li class="flex items-center"><i class="fa-solid fa-check text-emerald-400 mr-2.5"></i> Staging Environment Testing</li>
+                            </ul>
+                        </div>
+
+                        <button onclick="selectTier('Professional Pro')" class="mt-8 w-full py-3 bg-gradient-to-r from-cyan-500 to-emerald-500 hover:from-cyan-400 hover:to-emerald-400 text-slate-950 font-bold rounded-xl text-xs font-mono transition-all shadow-lg shadow-cyan-500/25">
+                            Select Pro Tier
+                        </button>
+                    </div>
+
+                    <!-- Enterprise Tier -->
+                    <div class="apex-glass-card rounded-2xl p-7 flex flex-col justify-between border border-slate-800">
+                        <div>
+                            <div class="text-xs font-mono text-indigo-400 uppercase tracking-widest mb-2">MISSION CRITICAL</div>
+                            <h3 class="text-2xl font-bold text-white">Enterprise SLA</h3>
+                            <p class="text-xs text-slate-400 mt-2 mb-6">High-traffic multi-region infrastructure with dedicated senior engineers.</p>
+
+                            <div class="mb-6 border-b border-slate-800 pb-6">
+                                <span class="text-4xl font-black text-white" id="price-enterprise">$1,499</span>
+                                <span class="text-xs text-slate-400 font-mono" id="period-enterprise">/ month</span>
+                            </div>
+
+                            <ul class="space-y-3 text-xs text-slate-300 font-mono">
+                                <li class="flex items-center"><i class="fa-solid fa-check text-emerald-400 mr-2.5"></i> Unlimited Urgent Security Patches</li>
+                                <li class="flex items-center"><i class="fa-solid fa-check text-emerald-400 mr-2.5"></i> 12 Hours Included Dev Engineering</li>
+                                <li class="flex items-center"><i class="fa-solid fa-check text-emerald-400 mr-2.5"></i> 15-Minute Guaranteed Incident SLA</li>
+                                <li class="flex items-center"><i class="fa-solid fa-check text-emerald-400 mr-2.5"></i> Dedicated Solution Architect</li>
+                            </ul>
+                        </div>
+
+                        <button onclick="selectTier('Enterprise SLA')" class="mt-8 w-full py-3 bg-slate-800 hover:bg-slate-700 text-white font-semibold rounded-xl text-xs font-mono transition-all border border-slate-700">
+                            Select Enterprise Tier
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 5: RISK & MAINTENANCE ROI CALCULATOR -->
+        <section id="calculator" class="py-20 bg-slate-950/80 border-t border-slate-800">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-14">
+                    <span class="text-indigo-400 font-mono text-xs tracking-widest uppercase bg-indigo-500/10 px-3 py-1 rounded-full border border-indigo-500/20">Financial Risk Assessment</span>
+                    <h2 class="text-3xl md:text-4xl font-extrabold text-white mt-3">Unmaintained Site Risk & ROI Estimator</h2>
+                    <p class="text-slate-400 mt-3 text-sm md:text-base">Calculate the financial exposure of unmitigated downtime, security vulnerabilities, and slow load speeds vs flat-rate SMJCare protection.</p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                    
+                    <!-- Sliders Input Panel -->
+                    <div class="lg:col-span-7 apex-glass-card rounded-2xl p-6 sm:p-8 border border-slate-800 space-y-6">
+                        
+                        <!-- Slider 1: Average Monthly Revenue -->
+                        <div>
+                            <div class="flex justify-between items-center mb-2 font-mono">
+                                <label class="text-xs text-slate-300 font-semibold">1. Average Monthly Digital Revenue ($):</label>
+                                <span id="val-rev" class="text-sm font-bold text-cyan-400 bg-slate-900 px-3 py-1 rounded border border-slate-800">$50,000</span>
+                            </div>
+                            <input type="range" id="input-rev" min="5000" max="500000" step="5000" value="50000" 
+                                   oninput="calculateRisk()" 
+                                   class="w-full h-2 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-cyan-400">
+                        </div>
+
+                        <!-- Slider 2: Months Without Core System Updates -->
+                        <div>
+                            <div class="flex justify-between items-center mb-2 font-mono">
+                                <label class="text-xs text-slate-300 font-semibold">2. Months Without System Updates / Patches:</label>
+                                <span id="val-months" class="text-sm font-bold text-amber-400 bg-slate-900 px-3 py-1 rounded border border-slate-800">6 Months</span>
+                            </div>
+                            <input type="range" id="input-months" min="1" max="24" step="1" value="6" 
+                                   oninput="calculateRisk()" 
+                                   class="w-full h-2 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-amber-400">
+                        </div>
+
+                        <!-- Slider 3: Monthly Website Traffic (Visitors) -->
+                        <div>
+                            <div class="flex justify-between items-center mb-2 font-mono">
+                                <label class="text-xs text-slate-300 font-semibold">3. Monthly Unique Traffic Volume:</label>
+                                <span id="val-traffic" class="text-sm font-bold text-indigo-400 bg-slate-900 px-3 py-1 rounded border border-slate-800">25,000 Visitors</span>
+                            </div>
+                            <input type="range" id="input-traffic" min="1000" max="250000" step="1000" value="25000" 
+                                   oninput="calculateRisk()" 
+                                   class="w-full h-2 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-indigo-400">
+                        </div>
+
+                    </div>
+
+                    <!-- Dynamic Financial Exposure Calculation Box -->
+                    <div class="lg:col-span-5 apex-glass-card rounded-2xl p-6 sm:p-8 border border-red-500/30 bg-slate-950 flex flex-col justify-between shadow-2xl relative">
+                        <div class="space-y-4">
+                            <div class="text-xs font-mono text-red-400 uppercase tracking-widest flex items-center">
+                                <i class="fa-solid fa-triangle-exclamation mr-2"></i> FINANCIAL EXPOSURE ANALYSIS
+                            </div>
+
+                            <div>
+                                <div class="text-xs text-slate-400">Estimated Downtime & Vulnerability Cost Risk:</div>
+                                <div id="calc-risk-total" class="text-4xl font-black text-red-400 mt-1 font-mono">$18,450 / yr</div>
+                            </div>
+
+                            <div class="space-y-2 pt-4 border-t border-slate-800 font-mono text-xs">
+                                <div class="flex justify-between text-slate-400">
+                                    <span>Security Exploit Risk:</span>
+                                    <span id="calc-security" class="text-red-400 font-bold">$12,000</span>
+                                </div>
+                                <div class="flex justify-between text-slate-400">
+                                    <span>Lost Sales (Slow Loading):</span>
+                                    <span id="calc-lost-sales" class="text-red-400 font-bold">$6,450</span>
+                                </div>
+                                <div class="flex justify-between text-slate-400">
+                                    <span>Flat Rate SMJCare Plan:</span>
+                                    <span class="text-emerald-400 font-bold">$8,388 / yr</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mt-6 p-4 rounded-xl bg-emerald-950/40 border border-emerald-500/40">
+                            <div class="text-xs font-bold text-emerald-400 mb-1">PROJECTION: SMJCARE ROI</div>
+                            <p class="text-xs text-slate-300" id="calc-roi-text">By deploying proactive maintenance, you prevent an estimated <span class="text-emerald-400 font-bold">$10,062</span> net annual financial loss.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 6: 4-STEP SCOPE CONFIGURATOR & REAL-TIME ESTIMATOR WIZARD -->
+        <section id="configurator" class="py-20 relative border-t border-slate-800">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-14">
+                    <span class="text-cyan-400 font-mono text-xs tracking-widest uppercase bg-cyan-500/10 px-3 py-1 rounded-full border border-cyan-500/20">Self-Guided Discovery Tool</span>
+                    <h2 class="text-3xl md:text-4xl font-extrabold text-white mt-3">Interactive Scope & Timeline Configurator</h2>
+                    <p class="text-slate-400 mt-3 text-sm md:text-base">Configure your custom software requirements below. Our real-time engine compiles your estimated build hours, timeline, and budget.</p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                    
+                    <!-- Wizard Steps Options (Left 7 cols) -->
+                    <div class="lg:col-span-7 apex-glass-card rounded-2xl p-6 sm:p-8 border border-slate-800 space-y-8">
+                        
+                        <!-- Step 1: Core Project Scope -->
+                        <div>
+                            <span class="text-xs font-mono text-cyan-400 uppercase tracking-widest block mb-3">STEP 1: PRIMARY ARCHITECTURE</span>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                                <label class="cursor-pointer">
+                                    <input type="radio" name="project_type" value="web_app" checked onchange="updateScope()" class="peer hidden">
+                                    <div class="p-4 rounded-xl border border-slate-800 peer-checked:border-cyan-500 peer-checked:bg-cyan-500/10 hover:bg-slate-900 transition-all">
+                                        <div class="font-bold text-sm text-white">Full-Stack Web App</div>
+                                        <p class="text-xs text-slate-400 mt-1">Custom React / Node / Database build</p>
+                                    </div>
+                                </label>
+                                <label class="cursor-pointer">
+                                    <input type="radio" name="project_type" value="ecommerce" onchange="updateScope()" class="peer hidden">
+                                    <div class="p-4 rounded-xl border border-slate-800 peer-checked:border-cyan-500 peer-checked:bg-cyan-500/10 hover:bg-slate-900 transition-all">
+                                        <div class="font-bold text-sm text-white">E-Commerce System</div>
+                                        <p class="text-xs text-slate-400 mt-1">High-scale payments & storefront</p>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Step 2: Feature Toggles -->
+                        <div>
+                            <span class="text-xs font-mono text-cyan-400 uppercase tracking-widest block mb-3">STEP 2: ADD-ON CAPABILITIES</span>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                                <label class="flex items-center space-x-3 p-3.5 rounded-xl border border-slate-800 hover:bg-slate-900 cursor-pointer transition-all">
+                                    <input type="checkbox" id="feat-cms" onchange="updateScope()" class="w-4 h-4 rounded text-cyan-500 accent-cyan-500">
+                                    <span class="text-xs text-slate-200 font-medium">Headless CMS Integration</span>
+                                </label>
+                                <label class="flex items-center space-x-3 p-3.5 rounded-xl border border-slate-800 hover:bg-slate-900 cursor-pointer transition-all">
+                                    <input type="checkbox" id="feat-auth" onchange="updateScope()" class="w-4 h-4 rounded text-cyan-500 accent-cyan-500">
+                                    <span class="text-xs text-slate-200 font-medium">Auth0 / Multi-Role SSO</span>
+                                </label>
+                                <label class="flex items-center space-x-3 p-3.5 rounded-xl border border-slate-800 hover:bg-slate-900 cursor-pointer transition-all">
+                                    <input type="checkbox" id="feat-api" onchange="updateScope()" class="w-4 h-4 rounded text-cyan-500 accent-cyan-500">
+                                    <span class="text-xs text-slate-200 font-medium">Custom REST / GraphQL API</span>
+                                </label>
+                                <label class="flex items-center space-x-3 p-3.5 rounded-xl border border-slate-800 hover:bg-slate-900 cursor-pointer transition-all">
+                                    <input type="checkbox" id="feat-seo" onchange="updateScope()" class="w-4 h-4 rounded text-cyan-500 accent-cyan-500">
+                                    <span class="text-xs text-slate-200 font-medium">Core Web Vitals Optimization</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Step 3: Estimated Page / Component Count -->
+                        <div>
+                            <div class="flex justify-between items-center mb-2 font-mono">
+                                <span class="text-xs text-cyan-400 uppercase tracking-widest">STEP 3: COMPONENT / PAGE VOLUME</span>
+                                <span id="val-pages" class="text-xs font-bold text-cyan-400 bg-slate-900 px-2.5 py-1 rounded">8 Custom Views</span>
+                            </div>
+                            <input type="range" id="input-pages" min="1" max="30" step="1" value="8" oninput="updateScope()" class="w-full h-2 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-cyan-400">
+                        </div>
+
+                    </div>
+
+                    <!-- Dynamic Scope Output Summary Sidebar (Right 5 cols) -->
+                    <div class="lg:col-span-5 apex-glass-card rounded-2xl p-6 sm:p-8 border border-cyan-500/40 bg-slate-950 sticky top-28 shadow-2xl space-y-6">
+                        <div class="flex justify-between items-center border-b border-slate-800 pb-4">
+                            <h3 class="text-base font-bold text-white flex items-center">
+                                <i class="fa-solid fa-calculator text-cyan-400 mr-2"></i> Live Scope Summary
+                            </h3>
+                            <span class="text-[10px] font-mono bg-cyan-500/20 text-cyan-400 px-2 py-0.5 rounded">REAL-TIME</span>
+                        </div>
+
+                        <div class="space-y-4 font-mono">
+                            <div class="flex justify-between text-xs">
+                                <span class="text-slate-400">Estimated Engineering Hours:</span>
+                                <span id="scope-hours" class="text-white font-bold">120 hrs</span>
+                            </div>
+                            <div class="flex justify-between text-xs">
+                                <span class="text-slate-400">Delivery Sprint Timeline:</span>
+                                <span id="scope-timeline" class="text-white font-bold">3 - 4 Weeks</span>
+                            </div>
+                            <div class="flex justify-between text-xs">
+                                <span class="text-slate-400">Recommended Engineering Team:</span>
+                                <span id="scope-team" class="text-emerald-400 font-bold">2 Senior Engineers</span>
+                            </div>
+
+                            <div class="pt-4 border-t border-slate-800">
+                                <span class="text-xs text-slate-400 block">Estimated Budget Range:</span>
+                                <div id="scope-cost" class="text-3xl font-black text-cyan-400 mt-1">$7,200 - $9,600</div>
+                            </div>
+                        </div>
+
+                        <button onclick="transferScopeToModal()" class="w-full py-3.5 bg-gradient-to-r from-cyan-500 via-indigo-500 to-emerald-500 hover:from-cyan-400 hover:to-emerald-400 text-slate-950 font-bold rounded-xl text-xs font-mono transition-all shadow-lg shadow-cyan-500/25 flex items-center justify-center space-x-2">
+                            <span>Proceed to Calendar Booking</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-slate-950 border-t border-slate-800 py-12 text-xs text-slate-400">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0">
+            <div class="flex items-center space-x-3">
+                <div class="w-7 h-7 rounded-lg bg-gradient-to-tr from-cyan-500 to-emerald-400 flex items-center justify-center text-slate-950 font-black">S</div>
+                <span class="text-slate-200 font-semibold text-sm">SMJ Inspirations</span>
+            </div>
+            <div class="font-mono text-[11px] text-slate-500">
+                &copy; 2026 SMJ Inspirations. SLA Response Standard: Active.
+            </div>
+        </div>
+    </footer>
+
+    <!-- SCHEDULING DISCOVERY MODAL (Integrated Lead Capture & Calendar) -->
+    <div id="booking-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-md hidden opacity-0 transition-opacity duration-300">
+        <div class="apex-glass-card rounded-2xl max-w-xl w-full p-6 sm:p-8 border border-cyan-500/50 shadow-2xl relative transform scale-95 transition-transform duration-300" id="booking-modal-box">
+            
+            <!-- Close Button -->
+            <button onclick="closeModal()" class="absolute top-4 right-4 text-slate-400 hover:text-white text-lg w-8 h-8 rounded-full bg-slate-900 border border-slate-800 flex items-center justify-center">
+                &times;
+            </button>
+
+            <div class="mb-6">
+                <span class="text-xs font-mono text-cyan-400 uppercase tracking-widest">QUALIFIED DISCOVERY CALL</span>
+                <h3 class="text-2xl font-extrabold text-white mt-1">Book Consultation</h3>
+                <p class="text-xs text-slate-400 mt-1">Your selected project configuration will be automatically attached to this booking.</p>
+            </div>
+
+            <!-- Attached Scope Summary Chip -->
+            <div id="modal-scope-chip" class="p-3 bg-cyan-950/40 border border-cyan-500/30 rounded-xl mb-6 font-mono text-xs text-cyan-300 flex justify-between items-center">
+                <span>Configured Scope Attached</span>
+                <span id="modal-scope-cost" class="font-bold text-emerald-400">$7,200 - $9,600</span>
+            </div>
+
+            <form onsubmit="handleBookingSubmit(event)" class="space-y-4 text-xs font-mono">
+                <div>
+                    <label class="block text-slate-300 mb-1">Your Full Name:</label>
+                    <input type="text" required placeholder="Alex Mercer" class="w-full bg-slate-900 border border-slate-800 rounded-xl p-3 text-white focus:border-cyan-500 focus:outline-none">
+                </div>
+                <div>
+                    <label class="block text-slate-300 mb-1">Work Email Address:</label>
+                    <input type="email" required placeholder="alex@company.com" class="w-full bg-slate-900 border border-slate-800 rounded-xl p-3 text-white focus:border-cyan-500 focus:outline-none">
+                </div>
+                <div class="grid grid-cols-2 gap-3">
+                    <div>
+                        <label class="block text-slate-300 mb-1">Preferred Date:</label>
+                        <input type="date" required class="w-full bg-slate-900 border border-slate-800 rounded-xl p-3 text-white focus:border-cyan-500 focus:outline-none">
+                    </div>
+                    <div>
+                        <label class="block text-slate-300 mb-1">Time Slot:</label>
+                        <select class="w-full bg-slate-900 border border-slate-800 rounded-xl p-3 text-white focus:border-cyan-500 focus:outline-none">
+                            <option>10:00 AM EST</option>
+                            <option>02:00 PM EST</option>
+                            <option>04:30 PM EST</option>
+                        </select>
+                    </div>
+                </div>
+
+                <button type="submit" class="w-full py-3.5 bg-gradient-to-r from-cyan-500 to-emerald-500 hover:from-cyan-400 hover:to-emerald-400 text-slate-950 font-bold rounded-xl text-xs font-mono transition-all shadow-lg shadow-cyan-500/30 mt-4">
+                    Confirm & Reserve Meeting Slot
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT CONTROLLERS & LOGIC -->
+    <script>
+        /* -------------------------------------------------------------------
+         * 1. TERMINAL LOGIC
+         * ------------------------------------------------------------------- */
+        const terminalHistory = document.getElementById('terminal-history');
+        const terminalInput = document.getElementById('terminal-input');
+
+        const commands = {
+            'help': 'Available commands: <span class="text-cyan-400">services</span>, <span class="text-cyan-400">quote</span>, <span class="text-cyan-400">audit</span>, <span class="text-cyan-400">clear</span>',
+            'services': 'SMJ Inspirations Services: 1. IT Consulting & Cloud Architecture, 2. Web App Development, 3. Continuous Site Maintenance & SLA.',
+            'quote': 'Launch our Scope Configurator below or type <span class="text-emerald-400">book</span> to schedule an engineer.',
+            'audit': 'Initiating synthetic load test... [Result: Performance score 99/100. TTFB < 30ms].',
+            'book': 'Opening calendar booking modal...'
+        };
+
+        function handleTerminalCommand(e) {
+            if (e.key === 'Enter') {
+                submitTerminalInput();
+            }
+        }
+
+        function submitTerminalInput() {
+            const cmd = terminalInput.value.trim().toLowerCase();
+            if (!cmd) return;
+
+            // Print User Input
+            const userLine = document.createElement('p');
+            userLine.innerHTML = `<span class="text-emerald-400 font-bold">$</span> ${cmd}`;
+            terminalHistory.appendChild(userLine);
+
+            // Print Output
+            const outputLine = document.createElement('p');
+            outputLine.className = 'text-slate-300 ml-2';
+
+            if (cmd === 'clear') {
+                terminalHistory.innerHTML = '';
+            } else if (cmd === 'book') {
+                outputLine.innerHTML = commands['book'];
+                terminalHistory.appendChild(outputLine);
+                openModal();
+            } else if (commands[cmd]) {
+                outputLine.innerHTML = commands[cmd];
+                terminalHistory.appendChild(outputLine);
+            } else {
+                outputLine.innerHTML = `<span class="text-red-400">Command not recognized '${cmd}'. Type 'help' for options.</span>`;
+                terminalHistory.appendChild(outputLine);
+            }
+
+            terminalInput.value = '';
+            const body = document.getElementById('terminal-body');
+            body.scrollTop = body.scrollHeight;
+        }
+
+        /* -------------------------------------------------------------------
+         * 2. REAL-TIME THEME CUSTOMIZER
+         * ------------------------------------------------------------------- */
+        function setCustomizerTheme(theme) {
+            const card = document.getElementById('theme-customizer-card');
+            const preview = document.getElementById('theme-preview-box');
+            
+            if (theme === 'cyber-neon') {
+                updateAccentColor('#8b5cf6');
+            } else if (theme === 'emerald-matrix') {
+                updateAccentColor('#10b981');
+            } else {
+                updateAccentColor('#06b6d4');
+            }
+        }
+
+        function updateAccentColor(hex) {
+            document.getElementById('accent-color-hex').innerText = hex;
+            document.getElementById('accent-color-picker').value = hex;
+            const preview = document.getElementById('theme-preview-box');
+            preview.style.borderColor = hex;
+        }
+
+        function setCornerRadius(radiusClass) {
+            const card = document.getElementById('theme-customizer-card');
+            const preview = document.getElementById('theme-preview-box');
+            preview.className = `mt-6 p-4 bg-slate-900 border border-slate-800 transition-all duration-300 ${radiusClass}`;
+        }
+
+        /* -------------------------------------------------------------------
+         * 3. DRAGGABLE BEFORE/AFTER SPLIT SLIDER
+         * ------------------------------------------------------------------- */
+        const container = document.getElementById('split-container');
+        const legacyLayer = document.getElementById('legacy-layer');
+        const handle = document.getElementById('slider-handle');
+        let isDragging = false;
+
+        function setSliderPosition(x) {
+            const rect = container.getBoundingClientRect();
+            let posX = x - rect.left;
+            if (posX < 0) posX = 0;
+            if (posX > rect.width) posX = rect.width;
+            const percentage = (posX / rect.width) * 100;
+            legacyLayer.style.width = `${percentage}%`;
+            handle.style.left = `${percentage}%`;
+        }
+
+        container.addEventListener('mousedown', (e) => { isDragging = true; setSliderPosition(e.clientX); });
+        window.addEventListener('mouseup', () => { isDragging = false; });
+        window.addEventListener('mousemove', (e) => { if (isDragging) setSliderPosition(e.clientX); });
+
+        // Touch support for mobile
+        container.addEventListener('touchstart', (e) => { isDragging = true; setSliderPosition(e.touches[0].clientX); });
+        window.addEventListener('touchend', () => { isDragging = false; });
+        window.addEventListener('touchmove', (e) => { if (isDragging) setSliderPosition(e.touches[0].clientX); });
+
+        /* -------------------------------------------------------------------
+         * 4. PRICE MATRIX TOGGLES
+         * ------------------------------------------------------------------- */
+        let currentBilling = 'monthly';
+
+        function setBilling(type) {
+            currentBilling = type;
+            const btnM = document.getElementById('billing-monthly');
+            const btnA = document.getElementById('billing-annual');
+
+            if (type === 'annual') {
+                btnA.className = 'px-5 py-2 rounded-lg text-xs font-mono font-semibold transition-all bg-cyan-500 text-slate-950 shadow-md flex items-center space-x-1.5';
+                btnM.className = 'px-5 py-2 rounded-lg text-xs font-mono font-semibold text-slate-400 hover:text-white transition-all';
+                document.getElementById('price-essential').innerText = '$239';
+                document.getElementById('price-pro').innerText = '$559';
+                document.getElementById('price-enterprise').innerText = '$1,199';
+            } else {
+                btnM.className = 'px-5 py-2 rounded-lg text-xs font-mono font-semibold transition-all bg-cyan-500 text-slate-950 shadow-md';
+                btnA.className = 'px-5 py-2 rounded-lg text-xs font-mono font-semibold text-slate-400 hover:text-white transition-all flex items-center space-x-1.5';
+                document.getElementById('price-essential').innerText = '$299';
+                document.getElementById('price-pro').innerText = '$699';
+                document.getElementById('price-enterprise').innerText = '$1,499';
+            }
+        }
+
+        function selectTier(tierName) {
+            openModal();
+        }
+
+        /* -------------------------------------------------------------------
+         * 5. MAINTENANCE RISK & ROI CALCULATOR
+         * ------------------------------------------------------------------- */
+        function calculateRisk() {
+            const rev = parseInt(document.getElementById('input-rev').value);
+            const months = parseInt(document.getElementById('input-months').value);
+            const traffic = parseInt(document.getElementById('input-traffic').value);
+
+            document.getElementById('val-rev').innerText = `$${rev.toLocaleString()}`;
+            document.getElementById('val-months').innerText = `${months} Months`;
+            document.getElementById('val-traffic').innerText = `${traffic.toLocaleString()} Visitors`;
+
+            // Exposure calculations
+            const securityExhib = Math.round((rev * 0.15) * (months / 6));
+            const lostSales = Math.round((traffic * 0.02 * 45) * (months / 12));
+            const totalRisk = securityExhib + lostSales;
+
+            document.getElementById('calc-risk-total').innerText = `$${totalRisk.toLocaleString()} / yr`;
+            document.getElementById('calc-security').innerText = `$${securityExhib.toLocaleString()}`;
+            document.getElementById('calc-lost-sales').innerText = `$${lostSales.toLocaleString()}`;
+
+            const netSavings = totalRisk - 8388;
+            document.getElementById('calc-roi-text').innerHTML = netSavings > 0 
+                ? `By deploying proactive maintenance, you prevent an estimated <span class="text-emerald-400 font-bold">$${netSavings.toLocaleString()}</span> net annual financial loss.`
+                : `Active maintenance provides complete security peace of mind against sudden server outages.`;
+        }
+
+        /* -------------------------------------------------------------------
+         * 6. SCOPE CONFIGURATOR WIZARD
+         * ------------------------------------------------------------------- */
+        function updateScope() {
+            const pages = parseInt(document.getElementById('input-pages').value);
+            document.getElementById('val-pages').innerText = `${pages} Custom Views`;
+
+            let baseHours = 40 + (pages * 8);
+
+            if (document.getElementById('feat-cms').checked) baseHours += 20;
+            if (document.getElementById('feat-auth').checked) baseHours += 15;
+            if (document.getElementById('feat-api').checked) baseHours += 30;
+            if (document.getElementById('feat-seo').checked) baseHours += 15;
+
+            const minCost = baseHours * 60;
+            const maxCost = baseHours * 80;
+            const weeksMin = Math.ceil(baseHours / 40);
+            const weeksMax = weeksMin + 1;
+
+            document.getElementById('scope-hours').innerText = `${baseHours} hrs`;
+            document.getElementById('scope-timeline').innerText = `${weeksMin} - ${weeksMax} Weeks`;
+            document.getElementById('scope-cost').innerText = `$${minCost.toLocaleString()} - $${maxCost.toLocaleString()}`;
+            document.getElementById('modal-scope-cost').innerText = `$${minCost.toLocaleString()} - $${maxCost.toLocaleString()}`;
+        }
+
+        function transferScopeToModal() {
+            openModal();
+        }
+
+        /* -------------------------------------------------------------------
+         * 7. MODAL SCHEDULING SYSTEM
+         * ------------------------------------------------------------------- */
+        function openModal() {
+            const modal = document.getElementById('booking-modal');
+            const box = document.getElementById('booking-modal-box');
+            modal.classList.remove('hidden');
+            setTimeout(() => {
+                modal.classList.remove('opacity-0');
+                box.classList.remove('scale-95');
+            }, 10);
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('booking-modal');
+            const box = document.getElementById('booking-modal-box');
+            modal.classList.add('opacity-0');
+            box.classList.add('scale-95');
+            setTimeout(() => {
+                modal.classList.add('hidden');
+            }, 300);
+        }
+
+        function handleBookingSubmit(e) {
+            e.preventDefault();
+            alert('Consultation Slot Reserved! An SMJ Inspirations Solution Architect will review your scope and send a calendar invite.');
+            closeModal();
+        }
+
+        // Initialize default calculations on load
+        window.onload = function() {
+            calculateRisk();
+            updateScope();
+        }
+    </script>
+</body>
+</html>
